@@ -29,7 +29,7 @@ namespace SegundaPracticaXiangZhou.Repositories
 
         public RepositoryComicOracle()
         {
-
+            //CONEXION
             string connectionString = "User Id=SYSTEM;Password=oracle; Data Source=localhost:1521/XE";
 
 
@@ -41,6 +41,8 @@ namespace SegundaPracticaXiangZhou.Repositories
             this.tablaComic = new DataTable();
             this.adapter.Fill(this.tablaComic);
         }
+
+        //LISTA COMIC
         public List<Comic> GetComics()
         {
             var consulta = from datos in this.tablaComic.AsEnumerable()
@@ -56,6 +58,7 @@ namespace SegundaPracticaXiangZhou.Repositories
             return consulta.ToList();
         }
 
+        //INSERTAR
         public void InsertComic(string nombre, string imagen, string descripcion)
         {
             OracleParameter pamape = new OracleParameter(":p_nombre", nombre);

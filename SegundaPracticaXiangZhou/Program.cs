@@ -3,10 +3,10 @@ using SegundaPracticaXiangZhou.Repositories;
 var builder = WebApplication.CreateBuilder(args);
 
 //PARA SQL
-//builder.Services.AddTransient<IRepository, RepositoryComicSQL>();
+builder.Services.AddTransient<IRepository, RepositoryComicSQL>();
 
 //PARA ORACLE
-builder.Services.AddTransient<IRepository, RepositoryComicOracle>();
+//builder.Services.AddTransient<IRepository, RepositoryComicOracle>();
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();

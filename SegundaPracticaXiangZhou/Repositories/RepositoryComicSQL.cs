@@ -2,13 +2,14 @@
 using System.Data.SqlClient;
 using System.Data;
 using SegundaPracticaXiangZhou.Models;
+using Microsoft.AspNetCore.Http.HttpResults;
 
 
 
 #region PROCEDURE
 
-//CREATE PROCEDURE SP_INSERT_COMIC(@nombre NVARCHAR, @imagen NVARCHAR,
-//@descripcion NVARCHAR)
+//CREATE PROCEDURE SP_INSERT_COMIC(@nombre NVARCHAR(50), @imagen NVARCHAR(120),
+//@descripcion NVARCHAR(120))
 //as
 //    DECLARE @IDCOMIC INT
 //	SELECT @IDCOMIC =  MAX(IDCOMIC) +1  FROM COMICS
