@@ -1,0 +1,27 @@
+﻿
+
+@model List<Comic>
+
+    <h1 style="color:crimson">
+        Lista COMICS SQL y Oracle
+    </h1>
+    <hr/>
+
+<a asp-controller="Comics"
+        asp-action="Create"
+        class="btn btn-dark">
+        New Comics
+    </a>
+<hr />
+
+
+
+<div class="slider-container">
+    @foreach (Comic comic in Model)
+  {
+    <img style="width:200px" src="@comic.Imagen" />
+    <h1>@comic.Nombre</h1>
+     <p>@comic.Descripcion</p>
+     <p>@comic.IdComic</p>
+  }
+ </div>
